@@ -1,0 +1,86 @@
+/* zerando as configurações */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Etilizando o parágrafo */
+.products p{
+    margin: 0;
+    text-align: center;
+    padding: 10px;
+    color: darkred;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    color:darkred;
+    padding: 30px;
+    background-color: rgb(192, 188, 188);
+
+}
+
+footer{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bolder;
+    background-color: black;
+    color:white;
+    padding: 20px;
+    text-align: center;
+}
+
+.products{
+    background-color: white;
+    border: 1px solid #000000;
+    padding: 20px;
+    margin-bottom: 20px;
+
+    /* transformando em container */
+    display: flex;
+
+    /* deixa o texto embaixo da imagem */
+    flex-direction: column;
+}
+
+.products img{
+    width: 100%;
+    height: auto;
+    padding-bottom: 10px;
+}
+
+main#album{
+    display: flex;
+    flex-flow: row wrap;
+    /* justify-content: space-around; */
+}
+
+section.coluna{
+    flex: 1 1 100%;
+    padding: 0px 5px;
+}
+/* 
+    Devices brakpoints
+    telas pequenas: 600px
+    celulares: 600px até 768px
+    Tablets: 769px até 992px
+    notebooks: 993px até 1200px
+    telas: acima de 1200px
+
+*/
+
+/* Tablets */
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    section.coluna{
+        flex: 1 1 50%;
+    }
+}
+
+/* Telas */
+@media screen and (min-width: 992px) {
+    section.coluna{
+        flex: 1 1 25%;
+    }
+}
